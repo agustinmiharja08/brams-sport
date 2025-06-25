@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Brams Sport - Pendaftaran</title>
+  <style>
+    /* Sama CSS */
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #000;
+      color: #fff;
+    }
+    header {
+      background-color: rgb(109, 20, 20);
+      padding: 20px;
+      text-align: center;
+    }
+    header h1 {
+      margin: 0;
+    }
+    nav {
+      display: flex;
+      justify-content: center;
+      background-color: #222;
+    }
+    nav a {
+      color: #fff;
+      padding: 14px 20px;
+      text-decoration: none;
+      transition: background 0.3s;
+    }
+    nav a:hover {
+      background-color: rgb(204, 247, 15);
+      color: #000;
+    }
+    section {
+      padding: 40px 20px;
+    }
+    .register-form {
+      max-width: 600px;
+      margin: 0 auto;
+      background-color: #333;
+      padding: 20px;
+      border-radius: 8px;
+    }
+    .register-form input, .register-form textarea {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border: none;
+      border-radius: 4px;
+    }
+    .register-form button {
+      background-color: rgb(163, 26, 8);
+      color: #fff;
+      border: none;
+      padding: 12px 20px;
+      cursor: pointer;
+      border-radius: 4px;
+    }
+    .register-form button:hover {
+      background-color: rgb(150, 231, 0);
+    }
+  </style>
+</head>
+<body>
+<nav>
+  <a href="index.html">Home</a>
+  <a href="event.html">Event</a>
+  <a href="tentang.html">About Us</a>
+  <a href="kontak.html">Contact Me</a>
+</nav>
+<section id="pendaftaran">
+  <h2>Form Pendaftaran</h2>
+  <div class="register-form">
+    <!-- Ganti URL sesuai Google Form Anda -->
+    <form action="https://docs.google.com/forms/d/e/FORM_ID_HERE/formResponse" method="POST" target="_blank">
+      
+      <label for="nama_kontingen">Nama Kontingen:</label>
+      <input type="text" id="nama_kontingen" name="entry.XXXXXX" required />
+
+      <label for="nama_lengkap">Nama Lengkap Peserta:</label>
+      <input type="text" id="nama_lengkap" name="entry.YYYYYY" required />
+
+      <label for="asal">Asal Dojo/Sekolah/Instansi/Perguruan:</label>
+      <input type="text" id="asal" name="entry.ZZZZZZ" required />
+
+      <label for="usia">Usia:</label>
+      <input type="number" id="usia" name="entry.AAAAAA" required />
+
+      <label for="kelas">Kelas Pertandingan:</label>
+        <select id="kelas" name="entry.BBBBBB" required>
+        <option value="">-- Pilih Kelas --</option>
+        <option value="Kata Perorangan Pra Usia Dini Putra">Kata Perorangan Pra Usia Dini Putra</option>
+        <option value="Kata Perorangan Pra Usia Dini Putri">Kata Perorangan Pra Usia Dini Putri</option>
+        <option value="Kumite Perorangan Pra Usia Dini -25kg Putra">Kumite Perorangan Pra Usia Dini -25kg Putra</option>
+        <option value="Kumite Perorangan Pra Usia Dini +25kg Putra">Kumite Perorangan Pra Usia Dini +25kg Putra</option>
+        <option value="Kumite Perorangan Pra Usia Dini -20kg Putri">Kumite Perorangan Pra Usia Dini -20kg Putri</option>
+        <option value="Kumite Perorangan Pra Usia Dini +20kg Putri">Kumite Perorangan Pra Usia Dini +20kg Putri</option>
+        </select>
+
+      <button type="submit">Daftar Sekarang</button>
+    </form>
+  </div>
+</section>
+
+
+
+<footer>
+  <p>© 2025 Brams Sport. All rights reserved.</p>
+</footer>
+</body>
+</html>
