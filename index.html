@@ -4,26 +4,27 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Brams Sport</title>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap" rel="stylesheet"/>
   <style>
-    /* CSS sama seperti sebelumnya, tapi pastikan tidak ada bagian yang mengatur posisi menu agar tetap di atas (karena tiap halaman berbeda) */
     body {
       margin: 0;
-      font-family: Arial, sans-serif;
-      background-color: #222222;
+      font-family: 'Poppins', sans-serif;
+      /* Background gambar dari file yang kamu berikan, ganti URL sesuai lokasi gambar kamu */
+      background-image: url('IMG_3781.JPG'); 
+      background-size: cover;
+      background-position: center;
       color: #fff;
     }
-    header {
-      background-color: rgb(109, 20, 20);
-      padding: 20px;
-      text-align: center;
-    }
-    header h1 {
-      margin: 0;
-    }
+
+    /* Navbar tetap di atas saat digulir (sticky) */
     nav {
+      position: sticky; /* agar tetap mengikuti saat scroll */
+      top: 0; /* posisi di atas */
+      z-index: 999; /* pastikan di atas elemen lain */
       display: flex;
       justify-content: center;
-      background-color: #222;
+      background-color: rgba(102, 1, 1, 0.8);
     }
     nav a {
       color: #fff;
@@ -32,15 +33,99 @@
       transition: background 0.3s;
     }
     nav a:hover {
-      background-color: rgb(204, 247, 15);
+      background-color:#ffd700;
       color: #000;
     }
+
+    /* Header bagian bawah (logo dan tagline) */
+    header {
+      background-color: rgba(102, 1, 1, 0.8);
+      padding: 20px;
+      display: flex;
+      justify-content: center;
+    }
+
+    /* Kontainer header agar isi di tengah dan vertikal */
+    .header-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    /* Logo */
+    .logo {
+      width: 80px;
+      height: 80px;
+      margin-bottom: 10px;
+    }
+
+    /* Judul utama */
+    h1 {
+      margin: 10px 0;
+      font-size: 32px;
+    }
+
+    /* Tulisan Safe And Easy Event */
+    .tagline {
+      margin: 0;
+      font-size: 16px;
+      font-weight: normal;
+    }
+
+    /* Seksi utama */
     section {
       padding: 40px 20px;
+      text-align: center;
+    }
+
+    /* Judul besar */
+    .main-title {
+      color: yellow;
+      font-size: 28px;
+      font-weight: 700;
+      margin-bottom: 20px;
+    }
+
+    /* Button style */
+    .btn {
+      display: inline-block;
+      padding: 14px 28px;
+      margin: 10px;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background 0.3s;
+      font-weight: bold;
+    }
+    .btn-primary {
+      background-color: #fff; /* putih */
+      color: #000; /* hitam */
+    }
+    .btn-primary:hover {
+      background-color: #f0f0f0;
+    }
+    .btn-yellow {
+      background-color: yellow;
+      color: #000;
+    }
+    .btn-yellow:hover {
+      background-color: #ffd700;
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: rgba(102, 1, 1, 0.8);
+      margin-top: 20px;
     }
   </style>
 </head>
 <body>
+
+<!-- Menu navigasi di atas, tetap mengikuti saat scroll -->
 <nav>
   <a href="index.html">Home</a>
   <a href="event.html">Event</a>
@@ -48,13 +133,30 @@
   <a href="kontak.html">Contact Me</a>
 </nav>
 
+<!-- Header bagian bawah, logo dan tagline -->
+<header>
+  <div class="header-container">
+    <!-- Ganti src logo jika perlu -->
+    <img src="logo.png" alt="Logo" class="logo" />
+    <h1>Brams Sport</h1>
+    <p class="tagline">Safe And Easy Event</p>
+  </div>
+</header>
+
+<!-- Seksi utama -->
 <section id="home">
-  <h2>Selamat Datang di Website Resmi Kami</h2>
+  <h1 class="main-title">Selamat Datang di Website Resmi Kami</h1>
   <p>Pengalaman Terbaik Untuk Event Anda</p>
+  <div>
+    <button class="btn btn-primary">Ikuti Pertandingan</button>
+    <button class="btn btn-yellow">Buat dan Kelola Kejuaraan</button>
+  </div>
 </section>
 
+<!-- Footer -->
 <footer>
   <p>© 2025 Brams Sport. All rights reserved.</p>
 </footer>
+
 </body>
 </html>
