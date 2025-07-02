@@ -1,155 +1,195 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Brams Sport</title>
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap" rel="stylesheet"/>
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Poppins', sans-serif;
-      /* Background gambar dari file yang kamu berikan, ganti URL sesuai lokasi gambar kamu */
-      background-image: url('IMG_3781.JPG'); 
-      background-size: cover;
-      background-position: center;
-      color: #fff;
-    }
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Brams Sport</title>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap" rel="stylesheet"/>
+<style>
+  /* CSS sama seperti sebelumnya, saya sertakan di sini lengkap */
 
-    /* Navbar tetap di atas saat digulir (sticky) */
-    nav {
-      position: sticky; /* agar tetap mengikuti saat scroll */
-      top: 0; /* posisi di atas */
-      z-index: 999; /* pastikan di atas elemen lain */
-      display: flex;
-      justify-content: center;
-      background-color: rgba(102, 1, 1, 0.8);
-    }
-    nav a {
-      color: #fff;
-      padding: 14px 20px;
-      text-decoration: none;
-      transition: background 0.3s;
-    }
-    nav a:hover {
-      background-color:#ffd700;
-      color: #000;
-    }
+  body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background-image: url('IMG-3701.JPG');
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+  }
 
-    /* Header bagian bawah (logo dan tagline) */
-    header {
-      background-color: rgba(102, 1, 1, 0.8);
-      padding: 20px;
-      display: flex;
-      justify-content: center;
-    }
+  nav {
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    background-color: rgb(1, 1, 20);
+    padding: 10px 0;
+    display: flex;
+    justify-content: center;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+  }
 
-    /* Kontainer header agar isi di tengah dan vertikal */
-    .header-container {
-      display: flex;
+  ul.menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  ul.menu li {
+    margin: 0 15px;
+  }
+
+  ul.menu li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 15px;
+    display: block;
+  }
+
+  ul.menu li:hover {
+    background-color: rgb(227, 252, 8);
+  }
+
+  header {
+    background-color: rgba(7, 0, 22, 0.9);
+    padding: 20px 0;
+    display: flex;
+    justify-content: center;
+  }
+
+  .header-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .logo {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 10px;
+  }
+
+  h1 {
+    margin: 10px 0;
+    font-size: 30px;
+  }
+
+  .tagline {
+    margin: 0;
+    font-size: 15px;
+    font-weight: normal;
+  }
+
+  section {
+    padding: 40px 20px;
+    text-align: center;
+    background-color: rgba(0,0,0,0.4);
+  }
+
+  .main-title {
+    color: yellow;
+    font-size: 40px;
+    font-weight: 700;
+    margin-bottom: 20px;
+  }
+
+  .btn {
+    display: inline-block;
+    padding: 14px 28px;
+    margin: 10px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s;
+    font-weight: bold;
+  }
+
+  .btn-primary {
+    background-color: #fff;
+    color: #000;
+  }
+  .btn-primary:hover {
+    background-color: #f0f0f0;
+  }
+
+  .btn-yellow {
+    background-color: yellow;
+    color: #000;
+  }
+  .btn-yellow:hover {
+    background-color: #ffd700;
+  }
+
+  footer {
+    text-align: center;
+    padding: 20px;
+    background-color: rgba(7, 0, 22, 0.9);
+    margin-top: 20px;
+  }
+
+  @media(max-width: 768px){
+    nav ul.menu {
       flex-direction: column;
-      align-items: center;
-      text-align: center;
     }
-
-    /* Logo */
-    .logo {
-      width: 80px;
-      height: 80px;
-      margin-bottom: 10px;
-    }
-
-    /* Judul utama */
-    h1 {
-      margin: 10px 0;
-      font-size: 32px;
-    }
-
-    /* Tulisan Safe And Easy Event */
-    .tagline {
+    nav ul.menu li {
       margin: 0;
-      font-size: 16px;
-      font-weight: normal;
     }
-
-    /* Seksi utama */
-    section {
-      padding: 40px 20px;
-      text-align: center;
-    }
-
-    /* Judul besar */
-    .main-title {
-      color: yellow;
-      font-size: 28px;
-      font-weight: 700;
-      margin-bottom: 20px;
-    }
-
-    /* Button style */
-    .btn {
-      display: inline-block;
-      padding: 14px 28px;
-      margin: 10px;
-      border: none;
-      border-radius: 8px;
-      font-size: 16px;
-      cursor: pointer;
-      transition: background 0.3s;
-      font-weight: bold;
-    }
-    .btn-primary {
-      background-color: #fff; /* putih */
-      color: #000; /* hitam */
-    }
-    .btn-primary:hover {
-      background-color: #f0f0f0;
-    }
-    .btn-yellow {
-      background-color: yellow;
-      color: #000;
-    }
-    .btn-yellow:hover {
-      background-color: #ffd700;
-    }
-
-    /* Footer */
-    footer {
-      text-align: center;
-      padding: 20px;
-      background-color: rgba(102, 1, 1, 0.8);
-      margin-top: 20px;
-    }
-  </style>
+  }
+</style>
 </head>
 <body>
 
-<!-- Menu navigasi di atas, tetap mengikuti saat scroll -->
+<!-- Navbar -->
 <nav>
-  <a href="index.html">Home</a>
-  <a href="event.html">Event</a>
-  <a href="tentang.html">About Us</a>
-  <a href="kontak.html">Contact Me</a>
+  <ul class="menu" id="menu">
+    <li><a href="#">Home</a></li>
+    <li><a href="event.html">Event</a></li>
+    <li><a href="tentang.html">About Us</a></li>
+    <li><a href="kontak.html">Contact Me</a></li>
+    <li><a href="#" id="signInLink">Sign In / Register</a></li>
+    <li><a href="#" id="logoutBtn" style="display:none;">Logout</a></li>
+  </ul>
 </nav>
 
-<!-- Header bagian bawah, logo dan tagline -->
+<!-- Header -->
 <header>
   <div class="header-container">
-    <!-- Ganti src logo jika perlu -->
     <img src="logo.png" alt="Logo" class="logo" />
     <h1>Brams Sport</h1>
     <p class="tagline">Safe And Easy Event</p>
   </div>
 </header>
 
-<!-- Seksi utama -->
+<!-- Main Section -->
 <section id="home">
-  <h1 class="main-title">Selamat Datang di Website Resmi Kami</h1>
+  <h1 class="main-title">Selamat Datang di Website Kami</h1>
   <p>Pengalaman Terbaik Untuk Event Anda</p>
-  <div>
-    <button class="btn btn-primary">Ikuti Pertandingan</button>
-    <button class="btn btn-yellow">Buat dan Kelola Kejuaraan</button>
+
+  <!-- Papan Peringkat -->
+  <div id="papan-peringkat" style="margin-top:30px;text-align:left;">
+    <h2 style="color:yellow;">Papan Peringkat</h2>
+    <ol style="max-width:800px; margin:auto; background: rgba(255,255,255,0.8); padding:20px; border-radius:8px; color:#000;">
+      <li>Tim A - 150 Poin</li>
+      <li>Peserta B - 140 Poin</li>
+      <li>Peserta C - 130 Poin</li>
+      <li>Peserta D - 120 Poin</li>
+    </ol>
+  </div>
+
+  <!-- Pengumuman -->
+  <div id="pengumuman" style="margin-top:30px;text-align:left;">
+    <h2 style="color:yellow;">Pengumuman</h2>
+    <p>Pengumuman pemenang dan jadwal pertandingan terbaru akan diumumkan di sini.</p>
+  </div>
+
+  <!-- Registrasi -->
+  <div id="registrasi" style="margin-top:30px;">
+    <h2 style="color:yellow;">Registrasi</h2>
+    <button class="btn btn-yellow" style="margin-top:10px;" id="registerBtn">Daftar Sekarang</button>
   </div>
 </section>
 
@@ -158,5 +198,42 @@
   <p>© 2025 Brams Sport. All rights reserved.</p>
 </footer>
 
+<script src="main.js"></script>
+<script src="register.js"></script>
+<script>
+  // Fungsi update UI login/logout
+  function updateUI() {
+    const loggedIn = localStorage.getItem('loggedIn');
+    const signInLink = document.getElementById('signInLink');
+    const logoutLink = document.getElementById('logoutBtn');
+    if (loggedIn === 'true') {
+      signInLink.style.display = 'none';
+      logoutLink.style.display = 'block';
+    } else {
+      signInLink.style.display = 'block';
+      logoutLink.style.display = 'none';
+    }
+  }
+
+  document.getElementById('signInLink').addEventListener('click', (e) => {
+    e.preventDefault();
+    window.location.href = 'register.html';
+  });
+
+  document.getElementById('logoutBtn').addEventListener('click', (e) => {
+    e.preventDefault();
+    localStorage.removeItem('loggedIn');
+    localStorage.removeItem('name');
+    updateUI();
+  });
+
+  document.getElementById('registerBtn').addEventListener('click', () => {
+    window.location.href = 'register.html';
+  });
+
+  window.onload = () => {
+    updateUI();
+  };
+</script>
 </body>
 </html>
