@@ -1,1 +1,183 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Brams Sport</title>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap" rel="stylesheet"/>
+  <style>
+    /* Reset dan dasar */
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background-color:rgb(1, 1, 20);
+      color:yellow ;
+    }
 
+    /* Navbar dengan sticky */
+    nav {
+      position: sticky; /* agar tetap di atas saat scroll */
+      top: 0;
+      z-index: 999;
+      background-color: rgb(1, 1, 20);
+      padding: 10px 0;
+      display: flex;
+      justify-content: center;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+      transition: all 0.3s ease;
+    }
+    /* Menu utama */
+    ul.menu {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-wrap: wrap;
+    }
+    /* Item menu */
+    ul.menu li {
+      position: relative;
+      margin: 0 15px;
+    }
+
+    /* Link menu */
+    ul.menu li a {
+      color: #fff;
+      text-decoration: none;
+      padding: 10px 15px;
+      display: block;
+      transition: background 0.3s;
+    }
+    
+    /* Hover menu item */
+    ul.menu li:hover {
+      background-color: rgb(227, 252, 8);
+    }
+
+    /* Submenu */
+    ul.menu li .submenu {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background-color: rgba(7, 0, 22, 0.9);
+      min-width: 180px;
+      border-radius: 4px;
+      z-index: 1000;
+    }
+
+    /* Tampilkan submenu saat hover */
+    ul.menu li:hover .submenu {
+      display: block;
+    }
+
+    /* Submenu item */
+    ul.menu li .submenu li {
+      width: 100%;
+    }
+
+    /* Link submenu */
+    ul.menu li .submenu li a {
+      padding: 10px;
+      border-bottom: 1px solid #fff;
+    }
+
+    ul.menu li .submenu li a:hover {
+      background-color: #ffd700;
+      color: #000;
+    }
+
+    /* Header bagian bawah, logo dan tagline */
+    header {
+      background-color: rgba(7, 0, 22, 0.9);
+      padding: 20px 0;
+      display: flex;
+      justify-content: center;
+    }
+
+    .header-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    .btn {
+      padding: 10px 20px;
+      background-color: yellow;
+      color: #000;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      margin-top: 10px;
+      font-weight: bold;
+    }
+    .btn:hover {
+      background-color: #ffd700;
+    }
+
+    /* ini untuk mengatur bagian text dan gambar pada isi event */
+  .kejuaraan-card {
+    width: 300px; /* sesuaikan ukuran kartu */
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 2px 2px 8px rgba(0,0,0,0.1);
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* agar semua elemen di tengah secara horizontal */
+   }
+
+  .kejuaraan-text {
+    font-size: 18px;
+    color: #333;
+    text-align: center; /* bisa diubah ke left atau right sesuai kebutuhan */
+    margin: 10px 0;
+  }
+
+  .kejuaraan-image {
+    width: 100%; /* bisa diubah, misalnya 200px */
+    max-width: 250px; /* maksimal ukuran gambar */
+    height: auto;
+    display: block;
+    margin: 10px auto; /* otomatis di tengah */
+    border-radius: 8px;
+  }
+
+  footer {
+    text-align: center;
+    padding: 20px;
+    background-color: rgba(7, 0, 22, 0.9);
+    margin-top: 20px;
+  }
+
+  </style>
+</head>
+<body>
+<nav>
+  <ul class="menu">
+    <li class="dropdown"></li>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="event.html">Event</a></li>
+    <li><a href="tentang.html">About Us</a></li>
+    <li><a href="kontak.html">Contact Me</a></li>
+    <!-- <li><a href="sign-in">Sign In</a></li> -->
+  </ul>
+</nav>
+
+<!-- event kejuaraan -->
+<section id="event">
+  <h1 class="main-title">Daftar Kejuaraan</h1>
+  <div id="kejuaraan-container"></div>
+</section>
+
+<!-- Footer -->
+<footer>
+  <p>© 2025 Brams Sport. All rights reserved.</p>
+</footer>
+
+<script src="main.js"></script>
+</body>
+</html>
