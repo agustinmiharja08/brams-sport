@@ -5,6 +5,12 @@ document.body.style.backgroundColor = "rgb:(1, 2, 22, 0.8)";
 // Data kejuaraan
 const kejuaraan = [
   {
+    nama: "Ujian Kenaikan Tingkat Kyu ASKI Periode III Tahun 2025",
+    tanggal: "2025-10-12",
+    src: "",
+    join: "Event Telah Selesai",
+  },
+  {
     nama: "KEJUARAAN KARATE FORKI CUP 2025",
     tanggal: "2025-08-03",
     src: "screenshot_20250627_203512_Gallery.jpg",
@@ -89,4 +95,5 @@ function tampilkanKejuaraan() {
 
 // Panggil fungsi saat halaman dimuat
 window.onload = tampilkanKejuaraan;
+
 
