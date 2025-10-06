@@ -8,7 +8,7 @@ const kejuaraan = [
     nama: "KEJUARAAN KARATE FORKI CUP 2025",
     tanggal: "2025-08-03",
     src: "screenshot_20250627_203512_Gallery.jpg",
-    join: "Daftar Event ini",
+    join: "Event Telah Selesai",
   },
   {
     nama: "SIMULASI KEJUARAAN KARATE AL BADAR CUP 1st 2025",
@@ -89,3 +89,4 @@ function tampilkanKejuaraan() {
 
 // Panggil fungsi saat halaman dimuat
 window.onload = tampilkanKejuaraan;
+
